@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173388270-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-173388270-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Co-Attention for Conditioned Image Matching.">
+    <meta name="author" content="Olivia Wiles">
+
+    <title>CoAM - Olivia Wiles</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/academicons.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Olivia Wiles</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#publication">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+
+    <section class="bg-dark" style="padding: 1em">
+      </section>
+
+    <section class="container" id="body">
+      <div class="container">
+        <center>
+          <hr class="light my-4">
+          <h2 class="section-heading mb-3" style="color: #343a40; font-size: calc(20px + 0.8vw);"><b>Co-Attention for Conditioned Image Matching</b></h2>
+          <h3 class="text-dark mb-4" style="font-size: calc(15px + 0.6vw);"><a href="https://arxiv.org/abs/2007.08480" style="color: #343a40;">CVPR 2021</a></h3>
+          <div class="row mb-2">
+            <!-- <div class="col-md-1"></div> -->
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="http://www.robots.ox.ac.uk/~ow/" style="color: #343a40; font-size: calc(10px + 0.8vw);">Olivia Wiles<sup>1</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="https://scholar.google.com/citations?user=vllAwPsAAAAJ&hl=en" style="color: #343a40; font-size: calc(10px + 0.8vw);">Sebastien Ehrhardt<sup>1</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="https://www.robots.ox.ac.uk/~az/" style="color: #343a40; font-size: calc(10px + 0.8vw);">Andrew Zisserman<sup>1</sup></a></p>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+          <p ></p>
+
+            <div class="row mb-2">
+                <div style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><sup>1</sup>VGG (University of Oxford)</p>
+                </div>
+              </div>
+            
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <!-- <iframe width="960" height="540" src="" style="max-width: 100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <img style="max-width: 100%" src="./imgs/teaser_two.png" />
+              <p class="text-dark mb-4" style="font-size: calc(10px + 0.2vw);"><b>Sample Correspondences:</b> Given two images,
+                the network predicts correspondences by conditioning features on <bf>both</bf> images. </bf> </p>
+
+              <hr class="light my-3">
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Abstract</p>
+      <p class="text-dark mb-4" style="font-size: calc(10px + 0.4vw);" align="justify">
+	  We propose a new approach to determine correspondences between image pairs  in the wild under large changes in illumination, viewpoint, context, and material.  While other approaches find correspondences between pairs of images by treating the images <i>independently</i>, we instead condition on <i>both</i> images to implicitly take account of the differences between them. To achieve this, we introduce (i) a spatial attention mechanism (a co-attention module, CoAM) for conditioning the learned features on both images, and (ii) a distinctiveness score used to choose the best matches at test time. CoAM can be added to standard architectures and trained using self-supervision or supervised data, and achieves a significant performance improvement under hard conditions, e.g. large viewpoint changes. We demonstrate that models using CoAM achieve state of the art  or competitive results on a wide range of tasks: local matching, camera localization, 3D reconstruction, and image stylization.
+              </p>
+
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);">Resources</p>
+            <div class="row mb-2">
+                <div class="col-md-1"></div> 
+                <!-- div class="col-auto col-md-3" style="margin: 0 auto;" -->
+                <!-- <div class="col-md-1"></div> -->
+		<!--	<p class="text-dark mb-1"><a href=""></a></p> -->
+                <!-- /div -->
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="https://arxiv.org/abs/2007.08480">Paper</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="./coam/supp.pdf">HiRes Supplementary</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="https://github.com/hyenal/coam">Code</a></p>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);">Results</p>
+
+        <p class="text-dark" style="font-size: calc(12px + 0.2vw);"><b>Sample generated 3D structures: </b>Given a large set of images, we used the correspondences obtained with CoAM as input
+          to a structure from motion pipeline, giving these reconstructions.</p>
+              <center>
+                <video controls="" autoplay="" muted="" inline="" width="320" style="max-width: 30%">
+                  <source src="videos/crop_gen.mp4" type="video/mp4" alt="Gendarmenmarkt results">
+                </video>
+                <video controls="" autoplay="" muted="" inline="" width="320" style= "max-width: 30%">
+                  <source src="videos/crop_madrid.mp4" type="video/mp4" alt="Madrid Metropolis results">
+                </video>
+                <video controls="" autoplay="" muted="" inline="" width="320" style="max-width: 30%">
+                  <source src="videos/crop_tower.mp4" type="video/mp4" alt="Tower of London results">
+                </video>
+              </center>
+              <hr class="light my-3">
+
+              <p class="text-dark" style="font-size: calc(12px + 0.2vw);"><b>Images stylised using our dense correspondences: </b>Given two images of the same section
+              taken from different viewpoints and having different styles, we can use our correspondences to manipulate one image into the viewpoint of the other, while still
+              maintaining its style. </p>
+                    <center>
+	              <img alt="Style1" width="250" style="max-width: 22%" src="videos/style1.gif" /> 
+	              <img alt="Style2" width="250" style="max-width: 22%" src="videos/style2.gif" /> 
+	              <img alt="Style3" width="250" style="max-width: 22%" src="videos/style3.gif" /> 
+	              <img alt="Style4" width="250" style="max-width: 22%" src="videos/style4.gif" /> 
+                    </center>
+                    <hr class="light my-3">
+
+
+              <hr class="light my-3">
+
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Citation</p>
+              <code class="codebox"><pre>@inproceedings{Wiles21,
+  author={Olivia Wiles and Sebastien Ehrhardt and Andrew Zisserman},
+  title={Co-Attention for Conditioned Image Matching},
+  year={2021},
+  conference={CVPR}
+}</pre></code>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+        </center>
+      </div>
+    </section>
+
+    <section class="bg-dark" style="padding: 1em">
+        <center>
+          <div class="footer-social-icons">
+            <ul class="social-icons">
+              <li><a href="https://github.com/oawiles" title="GitHub" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa fa-github"></i></a></li>
+              <li><a href="https://scholar.google.co.uk/citations?user=XQzHJSgAAAAJ&hl=en" title="Google Scholar" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa ai ai-google-scholar"></i></a></li>
+              <li><a href="https://twitter.com/oliviawiles1" title="Twitter" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa fa-twitter"></i></a></li>
+          
+            </ul>
+          </div>
+        </center>
+      </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+  </body>
+
+</html>

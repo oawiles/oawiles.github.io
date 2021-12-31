@@ -1,0 +1,183 @@
+<html>
+  <head>
+    <title>Self-supervised learning of a facial attribute embedding from video</title>
+
+    <link rel="stylesheet" href="resources/styles.css">
+    <meta property="og:title" content="Self-supervised learning of a facial attribute embedding from video" />
+  </head>
+
+  <body>
+    <br>
+    <center>
+      
+      <h2><a href="./index.html">Self-supervised Learning from Watching Faces</a></h2><br>
+    <h1>Self-supervised learning of a facial attribute embedding from video</h1>
+  </center>
+    
+  <br><br>
+    <table align=center width=700px>
+     <tr>
+    <td align=center width=100px>
+    <center>
+      <h3><a href="http://www.robots.ox.ac.uk/~ow/">Olivia Wiles<sup>*</sup></a></h3>
+    </center>
+    </td>
+
+    <td align=center width=100px>
+    <center>
+      <h3><a href="http://www.robots.ox.ac.uk/~vgg/people.html">A. Sophia Koepke<sup>*</sup></a></h3>
+    </center>
+    </td>
+
+    <td align=center width=100px>
+    <center>
+    <h3><a href="http://www.robots.ox.ac.uk/~vgg/people.html">Andrew Zisserman</a></h3>
+    </center>
+    </td>
+
+   </tr>
+  </table>
+
+  <br>
+  <table align=center width=700px>
+     <tr>
+    <td align=center width=100px>
+    <center>
+    <span style="font-size:20px">VGG, University of Oxford</span>
+    </center>
+    </td>
+   </tr>
+  </table>
+
+  <table align=center width=700px>
+     <tr>
+    <td align=center width=100px>
+    <center>
+	    <span style="font-size:20px">In BMVC, 2018</span><br>
+    <span style="font-size:14px">* denotes equal contribution</span>
+    </center>
+    </td>
+   </tr>
+  </table>
+
+        <br>
+        <table align=center width=900px>
+          <tr>
+                  <td width=600px>
+            <center>
+                      <a><img src = "./resources/fabnet_teaser.png" height="270px"></img></a><br>
+          </center>
+                  </td>
+                </tr>
+                  <td width=600px>
+            <center>
+              <p style="margin-top:0.5cm;"><i> <b>Overview of FAb-Net</b>: Fab-Net is a self-supervised framework that learns a face embedding which encodes facial attributes, such as head pose, expression and facial landmarks. It is trained in a self-supervised manner by leveraging video data. Given two frames from the same face track, FAb-Net learns to generate the target frame from a source frame.</i></p>
+          </center>
+                  </td>
+              </tr>
+        </table>
+
+          <br>
+          
+<p>Facial Attributes-Net (FAb-Net) is a self-supervised framework for learning a facial attributes embedding by simply watching videos of a human face speaking, laughing, and moving over time. We additionally show that multiple source frames and a curriculum learning schedule can be leveraged to improve the learned embedding. We demonstrate that FAb-Net learns a meaningful face embedding, as it encodes information about head pose, facial landmarks and facial expression -- i.e. facial attributes --<i> without </i> having been supervised with any labelled data. </p>
+
+        <br>
+        <table align=center width=900px>
+          <tr>
+                  <td width=800px>
+            <center>
+                      <a><img src = "./multisource7.png" height="500px"></img></a><br>
+          </center>
+                  </td>
+                </tr>
+                  <td width=600px>
+            <center>
+              <p style="margin-top:0.5cm;"><i> <b>Overview of the proxy task</b>: a target and source frame from the same video are embedded to a common space. Conditioned on these embeddings the network is tasked to warp the source frame into the target frame. The only supervision is that the generated frame should match the original target frame. This framework can then be extended to handle multiple source frames or to utilise a curriculum strategy.</i></p>
+          </center>
+                  </td>
+              </tr>
+        </table>
+
+          <br>
+
+<p>To achieve this goal, we propose a new proxy task for training the network in a self-supervised fashion. In particular, a source and a target image are embedded to the same space. 
+Conditioned only on these two embeddings, the network is tasked to warp one frame into another. 
+This ensures that the embeddings hold the relevant information (i.e. changes in pose, expression, etc).
+We then consider how we can extend this framework to take advantage of multiple source frames and a curriculum strategy.</p>
+
+              <p>Also, see our related framework <a href="./x2face.html">X2Face</a> which allows face image generation to be controlled with another face, audio information, or pose labels.</p>
+      <hr><hr>
+        <table align=center width=1400>
+      <center><h1>Paper</h1></center>
+
+          <td><span style="font-size:14pt">Self-supervised learning of a facial attribute embedding from video.<br>
+            Wiles, O.*, Koepke, A.S.*, Zisserman, A. In <em>BMVC</em>, 2018. <font style="color:red"><b>(Oral)</b></span>
+          <!-- [hosted on <a href="#">arXiv</a>]</a> -->
+          </td>
+                  </td>
+              </tr>
+
+      <table align=center width=430px>
+        <tr>
+
+          <td><span style="font-size:14pt"><center>
+            <a href="http://www.robots.ox.ac.uk/~vgg/publications/2018/Wiles18a/wiles18a.pdf">[pdf]</a>
+                  </center></td>
+
+          <td><span style="font-size:14pt"><center>
+            <a href="./resources/wiles18a_supp.pdf">[Supplementary material]</a>
+                  </center></td>
+          
+          <td><span style="font-size:14pt"><center>
+            <a href="./resources/bibtex2.txt">[Bibtex]</a>
+                  </center></td>
+                  
+          <td><span style="font-size:14pt"><center>
+            <a href="https://youtu.be/VisZLaZyblE?t=1884">[Video]</a>
+                  </center></td>
+        
+   	</tr>
+        </table>
+        <table align=center width=1300>
+          <tr>
+          <td><span style="font-size:14pt"> * denotes equal contribution
+          </span>
+            </td>
+        </tr>
+    </table>
+
+        <br>
+        </table>
+        <hr><hr>
+
+    <center><h1>Code</h1></center>
+
+        </tr>
+
+        <table align=center width=800px>
+        <tr><center>
+			<span style="font-size:14pt">Code is available at <a href="https://github.com/oawiles/FAb-Net">github</a><br><br>
+			Pretrained models are available <a href="release_bmvc_fabnet.zip" download>here</a></i><br><br> 
+		Links to the <a href="http://www.robots.ox.ac.uk/~vgg/data/voxceleb/">voxceleb</a> datasets and some pre-processed <a href="http://www.robots.ox.ac.uk/~vgg/research/CMBiometrics/">frames</a> used for Vox1 (in particular the 7.8 Gb one with 1fps).</i></span>         
+
+        <br>
+        </center></tr>
+      </table>
+          <br>
+      <hr><hr>
+
+       
+            <left>
+          <center><h1>Acknowledgements</h1></center>
+          We thank the anonymous reviewers for their comments. This work was funded by an EPSRC studentship and EPSRC Programme Grant Seebibyte EP/M013774/1. Thank you to Richard Zhang for letting us borrow their webpage template from <a href="http://richzhang.github.io/colorization/">here</a>.
+
+      </left>
+    </td>
+    </tr>
+    </table>
+
+    <br><br>
+</body>
+</html>
+
+

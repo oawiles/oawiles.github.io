@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+	  <!-- Global site tag (gtag.js) - Google Analytics -->
+	  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-162824652-1"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+        gtag('config', 'UA-162824652-1');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SynSin: End-to-end View Synthesis from a Single Image.">
+    <meta name="author" content="Olivia Wiles">
+
+    <title>View Synthesis - Olivia Wiles</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/creative.min.css" rel="stylesheet">
+    <link href="css/footer.css" rel="stylesheet">
+    <link href="css/academicons.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <!-- Navigation -->
+
+    <!-- Navigation -->
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Olivia Wiles</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#publication">Projects</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav> -->
+
+
+    <section class="bg-dark" style="padding: 1em">
+      </section>
+
+    <section class="container" id="body">
+      <div class="container">
+        <center>
+          <hr class="light my-4">
+          <h2 class="section-heading mb-3" style="color: #343a40; font-size: calc(20px + 0.8vw);"><b>SynSin: End-to-end View Synthesis from a Single Image</b></h2>
+          <h3 class="text-dark mb-4" style="font-size: calc(15px + 0.6vw);"><a href="https://arxiv.org/abs/1912.08804" style="color: #343a40;"> CVPR, 2020 (oral)</a></h3>
+          <div class="row mb-2">
+            <!-- <div class="col-md-1"></div> -->
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="http://www.robots.ox.ac.uk/~ow/" style="color: #343a40; font-size: calc(10px + 0.8vw);">Olivia Wiles<sup>1*</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="https://gkioxari.github.io/" style="color: #343a40; font-size: calc(10px + 0.8vw);">Georgia Gkioxari<sup>2</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="http://szeliski.org/RichardSzeliski.htm" style="color: #343a40; font-size: calc(10px + 0.8vw);">Richard Szeliski<sup>3</sup></a></p>
+            </div>
+            <div class="col-auto col-md-3" style="margin: 0 auto;">
+              <p class="text-dark mb-1"><a href="https://cs.stanford.edu/people/jcjohns/" style="color: #343a40; font-size: calc(10px + 0.8vw);">Justin Johnson<sup>2,4</sup></a></p>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+          <p ></p>
+
+          <!-- <div class="row mb-2"> -->
+            <center>
+                <div style="margin: 0 auto;">
+                    <p class="text-dark mb-1" style="color: #343a40; font-size: calc(10px + 0.4vw);"><sup>*</sup>Done while on internship at FAIR.</a></p>
+                </div>
+            </center>
+            <!-- <div class="col-md-1"></div> -->
+
+            <div class="row mb-2">
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><sup>1</sup>VGG (University of Oxford)</p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><sup>2</sup>Facebook AI Research (FAIR)</p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><sup>3</sup>Facebook</p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                  <p class="text-dark mb-1"><sup>4</sup>University of Michigan</p>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+            
+          <!-- </div> -->
+
+          <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+              <!-- <iframe width="960" height="540" src="" style="max-width: 100%" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+              <img style="max-width: 100%" src="./imgs/synsin_teaser.png" />
+              <p class="text-dark mb-4" style="font-size: calc(10px + 0.2vw);"><b>End-to-end view synthesis:</b> Given a single RGB image (red), SynSin generates images of the scene at 
+                new viewpoints (blue). SynSin predicts a 3D point cloud, which is projected onto new views using our 
+                differentiable renderer; the rendered point cloud is passed to a GAN to synthesise the output image. 
+                SynSin is trained end-to-end, without 3D supervision.</p>
+
+              <hr class="light my-3">
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Abstract</p>
+      <p class="text-dark mb-4" style="font-size: calc(10px + 0.4vw);" align="justify">
+                  We propose a method for single image view synthesis, allowing for the generation of new views of a scene from a single input image. 
+                  This is challenging, as it requires comprehensively understanding the 3D scene from a single image. 
+                  As a result, current methods typically use multiple images, train on ground-truth depth, or are limited 
+                  to synthetic data. We propose a novel end-to-end model for this task; it is trained on real images without 
+                  any ground-truth 3D information. To this end, we introduce a novel differentiable point cloud renderer 
+                  that is used to transform a latent 3D point cloud of features into the target view. The projected features 
+                  are decoded by our refinement network to inpaint missing regions and generate a realistic output image. 
+                  The 3D component inside of our generative model allows for interpretable manipulation of the latent feature 
+                  space at test time, e.g. we can animate trajectories from a single image. Unlike prior work, we can generate
+                   high resolution images and generalise to other input resolutions. We outperform baselines and prior work 
+                   on the Matterport, Replica, and RealEstate10K datasets.
+              </p>
+
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);">Resources</p>
+            <div class="row mb-2">
+                <!-- <div class="col-md-1"></div> -->
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+                <!-- <div class="col-md-1"></div> -->
+			<p class="text-dark mb-1"><a href="https://arxiv.org/abs/1912.08804">Paper</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="https://github.com/facebookresearch/synsin">Code</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="./resources/synsin_poster.pdf">Poster</a></p>
+                </div>
+                <div class="col-auto col-md-3" style="margin: 0 auto;">
+			<p class="text-dark mb-1"><a href="https://ai.facebook.com/blog/facebook-research-at-cvpr-2020">Blog</a></p>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+              <hr class="light my-3">
+              <p class="text-dark mb-3" style="font-size: calc(15px + 0.6vw);">Results</p>
+
+	      <p class="text-dark" style="font-size: calc(12px + 0.2vw);"><b>Sample generated trajectories: </b>Given the initial image in the video, SynSin generates the next set of images.</p>
+              <center>
+                  <td>
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media9.gif" style="-webkit-user-select: none;margin: auto;" width="150" style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media2.gif" style="-webkit-user-select: none;margin: auto;" width="150" style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media18.gif" style="-webkit-user-select: none;margin: auto;" width="150"  style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media5.gif" style="-webkit-user-select: none;margin: auto;" width="150"  style="max-width: 100%">
+                  </td>
+                  <p></p>
+                  <td>
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media14.gif" style="-webkit-user-select: none;margin: auto;" width="150" style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media19.gif" style="-webkit-user-select: none;margin: auto;" width="150" style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media20.gif" style="-webkit-user-select: none;margin: auto;" width="150"  style="max-width: 100%">
+                      <img src="http://www.robots.ox.ac.uk/~ow/videos/media24.gif" style="-webkit-user-select: none;margin: auto;" width="150"  style="max-width: 100%">
+                  </td>
+              </center>
+              <hr class="light my-3">
+
+
+              <hr class="light my-3">
+              <p class="text-dark mb-1" style="font-size: calc(15px + 0.6vw);">Citation</p>
+              <code class="codebox"><pre>@misc{Wiles19,
+  author={Olivia Wiles and Georgia Gkioxari and Richard Szeliski and Justin Johnson},
+  title={SynSin: End-to-end View Synthesis from a Single Image},
+  year={2019},
+  eprint={1912.08804},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV}
+}</pre></code>
+            </div>
+            <div class="col-md-1"></div>
+          </div>
+
+        </center>
+      </div>
+    </section>
+
+    <section class="bg-dark" style="padding: 1em">
+        <center>
+          <div class="footer-social-icons">
+            <ul class="social-icons">
+              <li><a href="https://github.com/oawiles" title="GitHub" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa fa-github"></i></a></li>
+              <li><a href="https://scholar.google.co.uk/citations?user=XQzHJSgAAAAJ&hl=en" title="Google Scholar" class="social-icon sr-button" style="font-size: 2em; color:#fff;"> <i class="fa ai ai-google-scholar"></i></a></li>
+            </ul>
+          </div>
+        </center>
+      </section>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/creative.min.js"></script>
+
+  </body>
+
+</html>
